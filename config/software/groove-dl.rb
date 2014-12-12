@@ -5,20 +5,19 @@
 #
 #  https://github.com/opscode/omnibus-software/tree/master/config/software
 #
-name "ruby-example"
-default_version "1.0.0"
+name "groove-dl"
+default_version "0.1.0"
 
 dependency "ruby"
 dependency "rubygems"
 dependency "bundler"
-dependency "rsync"
 
-source :git => "git://github.com/example/ruby.git"
+source :git => "git://github.com/PierreRambaud/groove-dl.git"
 
-relative_path "ruby-example"
+relative_path "groove-dl"
 
 build do
   bundle "install --path=#{install_dir}/embedded/service/gem"
-  command "mkdir -p #{install_dir}/embedded/service/ruby-example"
-  command "#{install_dir}/embedded/bin/rsync -a --delete --exclude=.git/*** --exclude=.gitignore ./ #{install_dir}/embedded/service/ruby-example/"
+  command "mkdir -p #{install_dir}/embedded/service/groove-dl"
+  command "#{install_dir}/embedded/bin/rsync -a --delete --exclude=.git/*** --exclude=.gitignore ./ #{install_dir}/embedded/service/groove-dl/"
 end

@@ -4,17 +4,12 @@ maintainer 'CHANGE ME'
 homepage 'https://CHANGE-ME.com'
 
 install_dir     '/opt/groove-dl'
-build_version   Omnibus::BuildVersion.semver
+build_version   '0.1.0'
 build_iteration 1
 
-# creates required build directories
-dependency 'preparation'
-
-# groove-dl dependencies/components
-# dependency 'somedep'
-
-# version manifest file
-dependency 'version-manifest'
+dependency "preparation"
+dependency "version-manifest"
+dependency "groove-dl"
 
 exclude '\.git*'
 exclude 'bundler\/git'
