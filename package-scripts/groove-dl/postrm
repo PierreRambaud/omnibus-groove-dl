@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Perform necessary groove-dl removal steps
+# after package is uninstalled.
+#
+
+echo "groove-dl has been uninstalled!"
+
+exit 0
