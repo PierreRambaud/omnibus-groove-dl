@@ -12,18 +12,14 @@ provisioner:
 platforms:
   - name: ubuntu-12.04
     run_list: apt::default
-  - name: ubuntu-11.04
+  - name: debian-7.1
     run_list: apt::default
-  - name: ubuntu-10.04
-    run_list: apt::default
-  - name: centos-5.10
   - name: centos-6.5
+  - name: windows-7
+    driver_config:
+      box: windows-7
+      box_url: http://aka.ms/vagrant-win7-ie11
 
 suites:
   - name: default
     run_list: omnibus::default
-    attributes:
-      omnibus:
-        build_user:  vagrant
-        build_dir:   /home/vagrant/groove-dl
-        install_dir: /opt/groove-dl
