@@ -1,4 +1,5 @@
 *.gem
+.project
 .bundle
 .kitchen/
 .kitchen.local.yml
