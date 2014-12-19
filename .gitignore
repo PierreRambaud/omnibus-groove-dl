@@ -3,6 +3,7 @@
 .bundle
 .kitchen/
 .kitchen.local.yml
+Berksfile.lock
 vendor/bundle
 pkg/*
 .vagrant
