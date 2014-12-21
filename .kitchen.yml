@@ -18,7 +18,7 @@ platforms:
   - name: windows-7
     driver_config:
       box: windows-7
-      box_url: http://vagrantboxes.devopslive.org/windows-7-enterprise-i386.box
+      box_url: http://aka.ms/vagrant-win7-ie11
 
 suites:
   - name: default
