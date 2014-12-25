@@ -9,9 +9,7 @@
 # By default, Omnibus uses system folders (like +/var+ and +/opt+) to build and
 # cache components. If you would to build everything internally, you can
 # uncomment the following options. This will prevent the need for root
-# permissions in most cases. You will also need to update the groove-dl
-# project configuration to build at +./local/omnibus/build+ instead of
-# ++
+# permissions in most cases.
 #
 # Uncomment this line to change the default base directory to "local"
 # -------------------------------------------------------------------
@@ -20,7 +18,7 @@
 # Alternatively you can tune the individual values
 # ------------------------------------------------
 # cache_dir     './local/omnibus/cache'
-# git_cache_dir './local/omnibus/cache/install_path'
+# git_cache_dir './local/omnibus/cache/git_cache'
 # source_dir    './local/omnibus/src'
 # build_dir     './local/omnibus/build'
 # package_dir   './local/omnibus/pkg'
@@ -33,14 +31,15 @@
 # Enable S3 asset caching
 # ------------------------------
 # use_s3_caching true
-# s3_access_key  ENV['S3_ACCESS_KEY']
-# s3_secret_key  ENV['S3_SECRET_KEY']
-# s3_bucket      ENV['S3_BUCKET']
+# s3_access_key  ENV['AWS_ACCESS_KEY_ID']
+# s3_secret_key  ENV['AWS_SECRET_ACCESS_KEY']
+# s3_bucket      ENV['AWS_S3_BUCKET']
 
 # Customize compiler bits
 # ------------------------------
 # solaris_compiler 'gcc'
 # build_retries 5
+# fetcher_read_timeout 120
 
 # Load additional software
 # ------------------------------
