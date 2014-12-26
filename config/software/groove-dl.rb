@@ -23,6 +23,8 @@ source :git => "git://github.com/PierreRambaud/groove-dl.git"
 relative_path "groove-dl"
 
 build do
+  env = with_standard_compiler_flags(with_embedded_path)
+
   if windows?
     {
       'tar.exe' => 'bsdtar.exe',

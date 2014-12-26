@@ -12,12 +12,12 @@ build_iteration 1
 install_dir "#{default_root}/#{name}"
 
 if windows?
-  package_name "groove-dl"
+  package_name 'groove-dl'
 end
 
-dependency "preparation"
-dependency "version-manifest"
-dependency "groove-dl"
+dependency 'preparation'
+dependency 'version-manifest'
+dependency 'groove-dl'
 
 exclude '**/.git'
 exclude '**/bundler/git'
