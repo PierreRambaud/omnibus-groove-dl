@@ -8,9 +8,11 @@ else
   dependency 'ruby'
 end
 
+dependency 'fontconfig'
+dependency 'freetype'
+dependency 'pcre'
 dependency 'bundler'
 dependency 'cairo'
-dependency 'pcre'
 dependency 'rubygems'
 dependency 'nokogiri'
 

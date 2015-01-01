@@ -1,10 +1,12 @@
-name 'pixman'
-default_version '0.32.4'
+name 'freetype'
+default_version '2.5.5'
+dependency 'pcre'
 
-source(url: "http://cairographics.org/releases/pixman-#{version}.tar.gz",
-       md5: 'eba449138b972fbf4547a8c152fea162')
+source(url: "http://download.savannah.gnu.org/releases/freetype/freetype-#{version}.tar.gz",
+       md5: '7448edfbd40c7aa5088684b0a3edb2b8')
 
-relative_path "pixman-#{version}"
+relative_path "freetype-#{version}"
+
 build do
   cmd = ['./configure',
          "--prefix=#{install_dir}/embedded"

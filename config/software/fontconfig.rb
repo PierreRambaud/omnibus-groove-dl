@@ -1,10 +1,11 @@
-name 'pixman'
-default_version '0.32.4'
+name 'fontconfig'
+default_version '2.11.91'
 
-source(url: "http://cairographics.org/releases/pixman-#{version}.tar.gz",
-       md5: 'eba449138b972fbf4547a8c152fea162')
+source(url: "http://www.freedesktop.org/software/fontconfig/release/fontconfig-#{version}.tar.gz",
+       md5: 'aa5364ab1c5038b2585451e356995083')
 
-relative_path "pixman-#{version}"
+relative_path "fontconfig-#{version}"
+
 build do
   cmd = ['./configure',
          "--prefix=#{install_dir}/embedded"
