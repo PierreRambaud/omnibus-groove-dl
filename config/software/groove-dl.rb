@@ -1,5 +1,10 @@
 name 'groove-dl'
+
 default_version '0.1.0'
+
+source git: 'https://github.com/PierreRambaud/groove-dl.git'
+
+relative_path 'groove-dl'
 
 if windows?
   dependency 'ruby-windows'
@@ -8,17 +13,13 @@ else
   dependency 'ruby'
 end
 
-dependency 'fontconfig'
 dependency 'freetype'
+dependency 'fontconfig'
 dependency 'pcre'
 dependency 'bundler'
 dependency 'cairo'
 dependency 'rubygems'
 dependency 'nokogiri'
-
-source git: 'https://github.com/PierreRambaud/groove-dl.git'
-
-relative_path 'groove-dl'
 
 build do
   env = with_standard_compiler_flags(with_embedded_path)

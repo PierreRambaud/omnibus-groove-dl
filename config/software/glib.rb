@@ -1,11 +1,13 @@
-name 'fontconfig'
+name 'glib'
 
-default_version '2.11.91'
+default_version '2.43.2'
 
-source(url: "http://www.freedesktop.org/software/fontconfig/release/fontconfig-#{version}.tar.gz",
-       md5: 'aa5364ab1c5038b2585451e356995083')
+source url: "http://ftp.gnome.org/pub/gnome/sources/glib/#{version.gsub(/\.(\d+)$/, '')}/glib-#{version}.tar.xz",
+       md5: '9e0ecd1c3da6647735591575981aca7a'
 
 relative_path "#{name}-#{version}"
+
+dependency 'libiconv'
 
 build do
   cmd = ['./configure',

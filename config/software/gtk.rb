@@ -1,9 +1,12 @@
-name 'fontconfig'
+name 'gtk'
 
-default_version '2.11.91'
+default_version '3.15.3'
 
-source(url: "http://www.freedesktop.org/software/fontconfig/release/fontconfig-#{version}.tar.gz",
-       md5: 'aa5364ab1c5038b2585451e356995083')
+source(url: "https://github.com/GNOME/gtk/archive/#{version}.tar.gz",
+       md5: '9a787068fb1c70387538baa81142bd7e')
+
+dependency 'automake'
+dependency 'autoconf'
 
 relative_path "#{name}-#{version}"
 
