@@ -11,7 +11,8 @@ dependency 'libiconv'
 
 build do
   cmd = ['./configure',
-         "--prefix=#{install_dir}/embedded"
+         "--prefix=#{install_dir}/embedded",
+         '--with-libiconv'
         ].join(' ')
 
   env = with_standard_compiler_flags(with_embedded_path)
