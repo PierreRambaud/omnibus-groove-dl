@@ -7,8 +7,6 @@ source(url: "http://xcb.freedesktop.org/dist/libxcb-#{version}.tar.gz",
 dependency 'libtool'
 dependency 'libxslt'
 dependency 'libXau'
-dependency 'libXrender'
-dependency 'libX11'
 dependency 'libpthread-stubs'
 dependency 'xcb-proto'
 
@@ -28,10 +26,7 @@ build do
     'LD_RUN_PATH' => "#{install_dir}/embedded/lib"
   )
 
-  command(cmd,
-          env: env)
-  command("make -j #{workers}",
-          env: env)
-  command('make install',
-          env: env)
+  command(cmd, env: env)
+  make("-j #{workers}", env: env)
+  make('install', env: env)
 end

@@ -24,10 +24,7 @@ build do
     'LD_RUN_PATH' => "#{install_dir}/embedded/lib"
   )
 
-  command(cmd,
-          env: env)
-  command("make -j #{workers}",
-          env: env)
-  command('make install',
-          env: env)
+  command(cmd, env: env)
+  make("-j #{workers}", env: env)
+  make('install', env: env)
 end

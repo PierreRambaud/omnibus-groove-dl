@@ -1,13 +1,10 @@
-name 'freetype'
+name 'xtrans'
+default_version '1.3.5'
 
-default_version '2.5.5'
-
-source(url: "http://download.savannah.gnu.org/releases/freetype/freetype-#{version}.tar.gz",
-       md5: '7448edfbd40c7aa5088684b0a3edb2b8')
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/xtrans-#{version}.tar.gz",
+       md5: '6e4eac1b7c6591da0753052e1eccfb58')
 
 relative_path "#{name}-#{version}"
-
-dependency 'pcre'
 
 build do
   cmd = ['./configure',

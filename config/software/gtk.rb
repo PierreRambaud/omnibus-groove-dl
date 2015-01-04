@@ -16,10 +16,8 @@ build do
         ].join(' ')
 
   env = with_standard_compiler_flags(with_embedded_path)
-  command(cmd,
-          env: env)
-  command("make -j #{workers}",
-          env: env)
-  command('make install',
-          env: env)
+
+  command(cmd, env: env)
+  make("-j #{workers}", env: env)
+  make('install', env: env)
 end

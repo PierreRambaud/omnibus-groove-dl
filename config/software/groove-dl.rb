@@ -17,9 +17,10 @@ dependency 'freetype'
 dependency 'fontconfig'
 dependency 'pcre'
 dependency 'bundler'
-dependency 'cairo'
 dependency 'rubygems'
 dependency 'nokogiri'
+dependency 'libXrender'
+dependency 'cairo'
 
 build do
   env = with_standard_compiler_flags(with_embedded_path)

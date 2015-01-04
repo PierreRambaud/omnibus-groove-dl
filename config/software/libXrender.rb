@@ -6,6 +6,8 @@ source(url: "http://xorg.freedesktop.org/releases/individual/lib/libXrender-#{ve
 
 relative_path "#{name}-#{version}"
 
+dependency 'libX11'
+
 build do
   cmd = ['./configure',
          "--prefix=#{install_dir}/embedded"
@@ -20,10 +22,7 @@ build do
     'LD_RUN_PATH' => "#{install_dir}/embedded/lib"
   )
 
-  command(cmd,
-          env: env)
-  command("make -j #{workers}",
-          env: env)
-  command('make install',
-          env: env)
+  command(cmd, env: env)
+  make("-j #{workers}", env: env)
+  make('install', env: env)
 end

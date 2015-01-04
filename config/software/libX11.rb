@@ -6,9 +6,14 @@ source(url: "http://xorg.freedesktop.org/releases/individual/lib/libX11-#{versio
 
 relative_path "#{name}-#{version}"
 
+dependency 'util-macros'
+dependency 'xtrans'
+dependency 'libxcb'
+
 build do
   cmd = ['./configure',
-         "--prefix=#{install_dir}/embedded"
+         "--prefix=#{install_dir}/embedded",
+         '--without-xmlto'
         ].join(' ')
 
   env = with_standard_compiler_flags(with_embedded_path)
@@ -20,10 +25,7 @@ build do
     'LD_RUN_PATH' => "#{install_dir}/embedded/lib"
   )
 
-  command(cmd,
-          env: env)
-  command("make -j #{workers}",
-          env: env)
-  command('make install',
-          env: env)
+  command(cmd, env: env)
+  make("-j #{workers}", env: env)
+  make('install', env: env)
 end

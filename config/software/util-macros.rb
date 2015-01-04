@@ -1,13 +1,10 @@
-name 'freetype'
+name 'util-macros'
+default_version '1.19.0'
 
-default_version '2.5.5'
-
-source(url: "http://download.savannah.gnu.org/releases/freetype/freetype-#{version}.tar.gz",
-       md5: '7448edfbd40c7aa5088684b0a3edb2b8')
+source(url: "http://xorg.freedesktop.org/releases/individual/util/util-macros-#{version}.tar.bz2",
+       md5: '1cf984125e75f8204938d998a8b6c1e1')
 
 relative_path "#{name}-#{version}"
-
-dependency 'pcre'
 
 build do
   cmd = ['./configure',
