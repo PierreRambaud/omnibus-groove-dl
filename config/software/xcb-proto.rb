@@ -1,16 +1,8 @@
-name 'libxcb'
-default_version '1.9'
+name 'xcb-proto'
+default_version '1.8'
 
-source(url: "http://xcb.freedesktop.org/dist/libxcb-#{version}.tar.gz",
-       md5: 'd92657d958dfd222a12f4e936a7a26c8')
-
-dependency 'libtool'
-dependency 'libxslt'
-dependency 'libXau'
-dependency 'libXrender'
-dependency 'libX11'
-dependency 'libpthread-stubs'
-dependency 'xcb-proto'
+source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
+       md5: '8d2cdb770129cef563088a90c5bec768')
 
 relative_path "#{name}-#{version}"
 

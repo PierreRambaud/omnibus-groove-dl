@@ -1,16 +1,8 @@
-name 'libxcb'
-default_version '1.9'
+name 'libpthread-stubs'
+default_version '0.1'
 
-source(url: "http://xcb.freedesktop.org/dist/libxcb-#{version}.tar.gz",
-       md5: 'd92657d958dfd222a12f4e936a7a26c8')
-
-dependency 'libtool'
-dependency 'libxslt'
-dependency 'libXau'
-dependency 'libXrender'
-dependency 'libX11'
-dependency 'libpthread-stubs'
-dependency 'xcb-proto'
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/libpthread-stubs-#{version}.tar.gz",
+       md5: '5e3e75160ab6a8c212d0ecd82aa04651')
 
 relative_path "#{name}-#{version}"
 

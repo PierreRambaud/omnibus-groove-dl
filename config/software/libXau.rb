@@ -1,16 +1,8 @@
-name 'libxcb'
-default_version '1.9'
+name 'libXau'
+default_version '1.0.8'
 
-source(url: "http://xcb.freedesktop.org/dist/libxcb-#{version}.tar.gz",
-       md5: 'd92657d958dfd222a12f4e936a7a26c8')
-
-dependency 'libtool'
-dependency 'libxslt'
-dependency 'libXau'
-dependency 'libXrender'
-dependency 'libX11'
-dependency 'libpthread-stubs'
-dependency 'xcb-proto'
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/libXau-#{version}.tar.gz",
+       md5: 'a85cd601d82bc79c0daa280917572e20')
 
 relative_path "#{name}-#{version}"
 
