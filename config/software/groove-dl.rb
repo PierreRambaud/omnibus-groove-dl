@@ -19,7 +19,6 @@ dependency 'pcre'
 dependency 'bundler'
 dependency 'rubygems'
 dependency 'nokogiri'
-dependency 'libXrender'
 dependency 'cairo'
 
 build do
