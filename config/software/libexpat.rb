@@ -1,13 +1,11 @@
-name 'fontconfig'
+name 'libexpat'
 
-default_version '2.11.91'
+default_version '1.95.8'
 
-source(url: "http://www.freedesktop.org/software/fontconfig/release/fontconfig-#{version}.tar.gz",
-       md5: 'aa5364ab1c5038b2585451e356995083')
+source(url: "http://downloads.sourceforge.net/expat/expat-#{version}.tar.gz",
+       md5: 'aff487543845a82fe262e6e2922b4c8e')
 
-relative_path "#{name}-#{version}"
-
-dependency 'libexpat'
+relative_path "expat-#{version}"
 
 build do
   cmd = ['./configure',
