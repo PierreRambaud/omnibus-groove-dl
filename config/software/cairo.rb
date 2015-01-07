@@ -8,6 +8,7 @@ source url: "http://cairographics.org/releases/cairo-#{version}.tar.xz",
 relative_path "#{name}-#{version}"
 
 dependency 'glib'
+dependency 'atk'
 dependency 'libxcb'
 dependency 'libpng'
 dependency 'pixman'
