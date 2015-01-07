@@ -7,7 +7,7 @@ source url: "http://ftp.gnome.org/pub/gnome/sources/glib/#{version.gsub(/\.(\d+)
 
 relative_path "#{name}-#{version}"
 
-dependency 'libiconv'
+dependency 'pkg-config'
 
 build do
   cmd = ['./configure',
