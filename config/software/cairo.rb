@@ -12,6 +12,7 @@ dependency 'atk'
 dependency 'libxcb'
 dependency 'libpng'
 dependency 'pixman'
+dependency 'gobject-introspection'
 
 build do
   cmd = ['./configure',

@@ -13,6 +13,7 @@ else
   dependency 'ruby'
 end
 
+dependency 'python'
 dependency 'freetype'
 dependency 'fontconfig'
 dependency 'pcre'
