@@ -6,14 +6,17 @@ source(url: "http://xorg.freedesktop.org/releases/individual/util/util-macros-#{
 
 relative_path "#{name}-#{version}"
 
+dependency 'pkg-config'
+
 build do
   cmd = ['./configure',
          "--prefix=#{install_dir}/embedded"
         ].join(' ')
 
   env = with_standard_compiler_flags(with_embedded_path)
-
   command(cmd, env: env)
   make("-j #{workers}", env: env)
   make('install', env: env)
+  copy("#{install_dir}/embedded/share/pkgconfig/xorg-macros.pc",
+       "#{install_dir}/embedded/lib/pkgconfig/xorg-macros.pc")
 end

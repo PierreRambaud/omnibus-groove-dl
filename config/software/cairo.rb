@@ -9,10 +9,10 @@ relative_path "#{name}-#{version}"
 
 dependency 'glib'
 dependency 'atk'
-dependency 'libxcb'
 dependency 'libpng'
 dependency 'pixman'
 dependency 'gobject-introspection'
+dependency 'libX11'
 
 build do
   cmd = ['./configure',

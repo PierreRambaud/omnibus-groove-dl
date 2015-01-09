@@ -6,9 +6,11 @@ source(url: "http://xorg.freedesktop.org/releases/individual/lib/libX11-#{versio
 
 relative_path "#{name}-#{version}"
 
-dependency 'util-macros'
-dependency 'xtrans'
 dependency 'libxcb'
+dependency 'inputproto'
+dependency 'kbproto'
+dependency 'xtrans'
+dependency 'util-macros'
 
 build do
   cmd = ['./configure',
