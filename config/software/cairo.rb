@@ -14,6 +14,7 @@ dependency 'pixman'
 dependency 'gobject-introspection'
 dependency 'libX11'
 dependency 'libXrender'
+dependency 'libXext'
 
 build do
   cmd = ['./configure',

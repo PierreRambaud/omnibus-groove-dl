@@ -1,8 +1,8 @@
 name 'libXext'
 default_version '1.3.3'
 
-source(url: "http://xorg.freedesktop.org/releases/individual/lib/libXext-#{version}.tar.gz",
-       md5: '5e3e75160ab6a8c212d0ecd82aa04651')
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
+       md5: '93f5ec084c998efbfb0befed22f9b57f')
 
 relative_path "#{name}-#{version}"
 
