@@ -1,7 +1,7 @@
 name 'libXau'
 default_version '1.0.8'
 
-source(url: "http://xorg.freedesktop.org/releases/individual/lib/libXau-#{version}.tar.gz",
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
        md5: 'a85cd601d82bc79c0daa280917572e20')
 
 relative_path "#{name}-#{version}"

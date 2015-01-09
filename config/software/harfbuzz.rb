@@ -1,8 +1,11 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'harfbuzz'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+default_version '0.9.37'
+
+source(url: "http://www.freedesktop.org/software/#{name}/release/#{name}-#{version}.tar.bz2",
+       md5: 'bfe733250e34629a188d82e3b971bc1e')
+
+dependency 'pkg-config'
 
 relative_path "#{name}-#{version}"
 

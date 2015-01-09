@@ -1,10 +1,12 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'libXcomposite'
+default_version '0.4.4'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
+       md5: 'af860b1554a423735d831e6f29ac1ef5')
 
 relative_path "#{name}-#{version}"
+
+dependency 'compositeproto'
 
 build do
   cmd = ['./configure',

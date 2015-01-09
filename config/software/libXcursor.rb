@@ -1,8 +1,8 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'libXcursor'
+default_version '1.1.14'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
+       md5: '39c8423de190d64f1c52fbc00022e52c')
 
 relative_path "#{name}-#{version}"
 

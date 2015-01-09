@@ -1,10 +1,12 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'libxshmfence'
+default_version '1.2'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
+       md5: 'f0b30c0fc568b22ec524859ee28556f1')
 
 relative_path "#{name}-#{version}"
+
+dependency 'libX11'
 
 build do
   cmd = ['./configure',

@@ -22,6 +22,7 @@ dependency 'bundler'
 dependency 'rubygems'
 dependency 'nokogiri'
 dependency 'cairo'
+dependency 'gtk'
 
 build do
   env = with_standard_compiler_flags(with_embedded_path)

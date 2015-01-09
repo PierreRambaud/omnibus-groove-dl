@@ -1,7 +1,7 @@
 name 'libpthread-stubs'
 default_version '0.1'
 
-source(url: "http://xorg.freedesktop.org/releases/individual/lib/libpthread-stubs-#{version}.tar.gz",
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
        md5: '5e3e75160ab6a8c212d0ecd82aa04651')
 
 relative_path "#{name}-#{version}"

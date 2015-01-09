@@ -1,8 +1,13 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'pango'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+default_version '1.36.8'
+
+source(url: "http://ftp.gnome.org/pub/gnome/sources/#{name}/#{version.gsub(/\.(\d+)$/, '')}/#{name}-#{version}.tar.xz",
+       md5: '217a9a753006275215fa9fa127760ece')
+
+dependency 'pkg-config'
+dependency 'fontconfig'
+dependency 'harfbuzz'
 
 relative_path "#{name}-#{version}"
 

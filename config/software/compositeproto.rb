@@ -1,8 +1,8 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'compositeproto'
+default_version '0.4'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/proto/#{name}-#{version}.tar.gz",
+       md5: '33a79f6ba950bc5b41e077c951871bd5')
 
 relative_path "#{name}-#{version}"
 

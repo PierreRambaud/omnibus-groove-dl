@@ -1,8 +1,8 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'libXi'
+default_version '1.7'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
+       md5: 'c2aa307134e98567ae270be06bb3be9d')
 
 relative_path "#{name}-#{version}"
 

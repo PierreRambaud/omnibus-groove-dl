@@ -1,8 +1,8 @@
 name 'libxcb'
-default_version '1.9'
+default_version '1.11'
 
 source(url: "http://xcb.freedesktop.org/dist/libxcb-#{version}.tar.gz",
-       md5: 'd92657d958dfd222a12f4e936a7a26c8')
+       md5: '1698dd837d7e6e94d029dbe8b3a82deb')
 
 dependency 'pkg-config'
 dependency 'libtool'

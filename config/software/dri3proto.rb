@@ -1,8 +1,8 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'dri3proto'
+default_version '1.0'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/proto/#{name}-#{version}.tar.gz",
+       md5: '25e84a49a076862277ee12aebd49ff5f')
 
 relative_path "#{name}-#{version}"
 

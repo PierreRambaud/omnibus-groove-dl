@@ -1,7 +1,7 @@
 name 'libX11'
 default_version '1.6.2'
 
-source(url: "http://xorg.freedesktop.org/releases/individual/lib/libX11-#{version}.tar.gz",
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
        md5: '7e17129e1678355d8268883ee31a6edf')
 
 relative_path "#{name}-#{version}"

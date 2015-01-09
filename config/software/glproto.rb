@@ -1,8 +1,8 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'glproto'
+default_version '1.4.17'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/proto/#{name}-#{version}.tar.gz",
+       md5: 'd69554c1b51a83f2c6976a640819911b')
 
 relative_path "#{name}-#{version}"
 

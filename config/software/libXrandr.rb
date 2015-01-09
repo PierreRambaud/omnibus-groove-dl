@@ -1,10 +1,12 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'libXrandr'
+default_version '1.4.2'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://xorg.freedesktop.org/releases/individual/lib/#{name}-#{version}.tar.gz",
+       md5: '69219e723a80f6e2ac38d17148aa62ca')
 
 relative_path "#{name}-#{version}"
+
+dependency 'randrproto'
 
 build do
   cmd = ['./configure',

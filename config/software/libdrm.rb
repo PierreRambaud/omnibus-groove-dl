@@ -1,10 +1,12 @@
-name 'xcb-proto'
-default_version '1.11'
+name 'libdrm'
+default_version '2.4.58'
 
-source(url: "http://xcb.freedesktop.org/dist/xcb-proto-#{version}.tar.gz",
-       md5: 'c8c6cb72c84f58270f4db1f39607f66a')
+source(url: "http://dri.freedesktop.org/#{name}/#{name}-#{version}.tar.gz",
+       md5: 'e56c0c79f7b17f761b0287b25b500cce')
 
 relative_path "#{name}-#{version}"
+
+dependency 'libpciaccess'
 
 build do
   cmd = ['./configure',
