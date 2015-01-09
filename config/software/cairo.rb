@@ -13,6 +13,7 @@ dependency 'libpng'
 dependency 'pixman'
 dependency 'gobject-introspection'
 dependency 'libX11'
+dependency 'libXrender'
 
 build do
   cmd = ['./configure',

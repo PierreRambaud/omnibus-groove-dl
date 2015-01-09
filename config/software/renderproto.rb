@@ -1,13 +1,10 @@
-name 'libXrender'
-default_version '0.9.8'
+name 'renderproto'
+default_version '0.11'
 
-source(url: "http://xorg.freedesktop.org/releases/individual/lib/libXrender-#{version}.tar.gz",
-       md5: '8be1c51f4425529617a5a43d5d192a31')
+source(url: "http://xorg.freedesktop.org/releases/individual/proto/#{name}-#{version}.tar.gz",
+       md5: '57216f25b9a5edc561b83a7484cb17e8')
 
 relative_path "#{name}-#{version}"
-
-dependency 'libX11'
-dependency 'renderproto'
 
 build do
   cmd = ['./configure',
