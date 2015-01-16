@@ -1,8 +1,8 @@
-name 'dri2proto'
-default_version '2.8'
+name 'xineramaproto'
+default_version '1.2'
 
 source(url: "http://xorg.freedesktop.org/releases/individual/proto/#{name}-#{version}.tar.gz",
-       md5: '19ea18f63d8ae8053c9fa84b60365b77')
+       md5: '1e98484ffa9b0eb6ab9d00cd53bfe74f')
 
 relative_path "#{name}-#{version}"
 

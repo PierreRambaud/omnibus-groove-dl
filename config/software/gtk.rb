@@ -10,21 +10,24 @@ dependency 'libXfixes'
 dependency 'libXrandr'
 dependency 'libXcursor'
 dependency 'libXcomposite'
+dependency 'libXinerama'
 dependency 'libXi'
 dependency 'gdk-pixbuf'
 dependency 'pango'
-# dependency 'libepoxy'
+dependency 'libepoxy'
+dependency 'libexpat'
+dependency 'at-spi2-atk'
 
 relative_path "#{name}+-#{version}"
 
 build do
-  # cmd = ['./configure',
-  #        "--prefix=#{install_dir}/embedded"
-  #       ].join(' ')
+  cmd = ['./configure',
+         "--prefix=#{install_dir}/embedded"
+        ].join(' ')
 
-  # env = with_standard_compiler_flags(with_embedded_path)
+  env = with_standard_compiler_flags(with_embedded_path)
 
-  # command(cmd, env: env)
-  # make("-j #{workers}", env: env)
-  # make('install', env: env)
+  command(cmd, env: env)
+  make("-j #{workers}", env: env)
+  make('install', env: env)
 end

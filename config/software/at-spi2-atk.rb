@@ -1,10 +1,14 @@
-name 'dri3proto'
-default_version '1.0'
+name 'at-spi2-atk'
 
-source(url: "http://xorg.freedesktop.org/releases/individual/proto/#{name}-#{version}.tar.gz",
-       md5: '25e84a49a076862277ee12aebd49ff5f')
+default_version '2.15.3'
+
+source url: "http://ftp.gnome.org/pub/gnome/sources/#{name}/#{version.gsub(/\.(\d+)$/, '')}/#{name}-#{version}.tar.xz",
+       md5: 'fa77f95b38e6fbbbc07ed248a1c64922'
 
 relative_path "#{name}-#{version}"
+
+dependency 'dbus'
+dependency 'at-spi2-core'
 
 build do
   cmd = ['./configure',
