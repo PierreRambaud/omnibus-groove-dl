@@ -17,4 +17,5 @@ build do
   command(cmd, env: env)
   make("-j #{workers}", env: env)
   make('install', env: env)
+  copy("#{install_dir}/embedded/lib/libexpat.so", "#{install_dir}/embedded/lib/libexpat.so.1")
 end
