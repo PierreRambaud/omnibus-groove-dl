@@ -12,9 +12,7 @@ dependency 'perl'
 build do
   env = with_standard_compiler_flags(with_embedded_path)
     .merge('INSTALL_BASE' => "#{install_dir}/embedded")
-    .merge('EXPATLIBPATH' => "#{install_dir}/embedded/lib")
-    .merge('EXPATINCPATH' => "#{install_dir}/embedded/include")
-  command("#{install_dir}/embedded/bin/perl Makefile.PL", env: env)
+  command("#{install_dir}/embedded/bin/perl Makefile.PL EXPATLIBPATH=#{install_dir}/embedded/lib EXPATINCPATH=#{install_dir}/embedded/include", env: env)
   make(env: env)
   make('install', env: env)
 end
