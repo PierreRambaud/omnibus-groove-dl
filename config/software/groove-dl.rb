@@ -23,6 +23,7 @@ dependency 'rubygems'
 dependency 'nokogiri'
 dependency 'cairo'
 dependency 'gtk'
+dependency 'appbundler'
 
 build do
   env = with_standard_compiler_flags(with_embedded_path)
@@ -55,6 +56,8 @@ build do
     gem 'build groove-dl.gemspec', env: env
     gem 'install groove*.gem --no-ri --no-rdoc', env: env
   end
+
+  appbundle 'groove-dl'
 
   delete "#{install_dir}/embedded/docs"
   delete "#{install_dir}/embedded/share/man"
