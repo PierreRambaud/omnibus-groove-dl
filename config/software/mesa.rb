@@ -6,6 +6,7 @@ source(url: "ftp://ftp.freedesktop.org/pub/mesa/#{version}/MesaLib-#{version}.ta
 
 relative_path "Mesa-#{version}"
 
+dependency 'automake'
 dependency 'pkg-config'
 dependency 'glproto'
 dependency 'libdrm'

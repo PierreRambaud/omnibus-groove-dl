@@ -15,6 +15,12 @@ build do
   env = with_standard_compiler_flags(with_embedded_path)
 
   command(cmd, env: env)
+  if rhel? && _64_bit?
+    # Because rhel based system always tried to search libffi in lib64 instead
+    # of lib directory
+    link("#{install_dir}/embedded/lib", "#{install_dir}/embedded/lib64")
+  end
+
   make("-j #{workers}", env: env)
   make('install', env: env)
 end
