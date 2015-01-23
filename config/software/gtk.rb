@@ -6,6 +6,7 @@ source(url: "http://ftp.gnome.org/pub/gnome/sources/#{name}+/#{version.gsub(/\.(
        md5: '025938c2bc09fcc6173b5533681550ee')
 
 dependency 'pkg-config'
+dependency 'gir-repository'
 dependency 'libXfixes'
 dependency 'libXrandr'
 dependency 'libXcursor'
