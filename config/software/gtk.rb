@@ -1,9 +1,9 @@
 name 'gtk'
 
-default_version '3.15.3'
+default_version '3.14.7'
 
 source(url: "http://ftp.gnome.org/pub/gnome/sources/#{name}+/#{version.gsub(/\.(\d+)$/, '')}/#{name}+-#{version}.tar.xz",
-       md5: '5a2e90dc89f3dd64012cd4b38284a115')
+       md5: '025938c2bc09fcc6173b5533681550ee')
 
 dependency 'pkg-config'
 dependency 'libXfixes'

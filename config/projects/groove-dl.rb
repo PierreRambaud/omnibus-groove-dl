@@ -1,7 +1,7 @@
 
 name 'groove-dl'
 maintainer 'Pierre Rambaud'
-homepage 'https://github.com/PierreRambaud'
+homepage 'https://github.com/PierreRambaud/groove-dl'
 
 build_version '0.1.0'
 build_iteration 1

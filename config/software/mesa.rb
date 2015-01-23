@@ -23,7 +23,7 @@ build do
          '--enable-glx-tls',
          '--enable-gallium-egl',
          '--disable-dri',
-         '--with-gallium-drivers=nouveau,svga,swrast',
+         '--with-gallium-drivers=nouveau,svga,swrast'
         ].join(' ')
 
   env = with_standard_compiler_flags(with_embedded_path)
