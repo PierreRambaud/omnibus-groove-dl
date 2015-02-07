@@ -21,4 +21,5 @@ exclude '**/bundler/git'
 
 package :msi do
   upgrade_code '140e8f3f-854a-4a2d-a073-6d22e75fdb28'
+  wix_candle_extension 'WixUtilExtension'
 end
